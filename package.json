@@ -1,0 +1,11 @@
+{
+  "name": "attestly-oss",
+  "private": true,
+  "description": "Attestly Open Source Tools",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present"
+  }
+}

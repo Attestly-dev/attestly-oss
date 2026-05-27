@@ -1,0 +1,38 @@
+{
+  "name": "@attestly/cli",
+  "version": "0.1.2",
+  "description": "Attestly CLI and Initializer",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "attestly": "dist/index.js",
+    "attestly-cli": "dist/index.js",
+    "attestly-audit": "bin/attestly-audit.mjs"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "echo 'Skipping CLI build for Vercel'",
+    "build:cli": "cd ../studio-ui && npm run build:ui && cd ../audit-cli && tsup",
+    "dev": "tsup --watch",
+    "test": "node test/verify.test.mjs"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
